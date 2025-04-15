@@ -1,5 +1,5 @@
 // src/App.tsx
-import React, { useState, useEffect, useCallback } from 'react';
+import  { useState, useEffect, useCallback } from 'react';
 import { Question, UserAnswer, GameState } from './types';
 import GameScreen from './components/GameScreen';
 import FeedbackScreen from './components/FeedbackScreen';
