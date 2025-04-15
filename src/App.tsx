@@ -22,7 +22,11 @@ function App() {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        const {questions}:{questions:Question[]}= await response.json();
+        let result= await response.json();
+        console.log(result)
+        const [data] =result;
+        console.log('data',data)
+        const {questions}:{questions:Question[]} =data.data;
         // Ensure data has the expected structure if needed
         console.log(questions)
          if (!questions || questions.length === 0) {
